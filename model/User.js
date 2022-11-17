@@ -3,12 +3,11 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 
-const BlogPost = new Schema({
-  author: ObjectId,
-  title: String,
-  body: String,
-  date: Date,
-  pass : String
+const UserModel = new Schema({
+  nom: String,
+  prenom: String,
+  email: String,
+  password : String
 });
 
-module.exports = mongoose.model("BlogPost", BlogPost);
+module.exports = mongoose.model("User", UserModel);
