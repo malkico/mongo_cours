@@ -33,8 +33,3 @@ app.delete("/api/user/delete/:field/:value", deleteUser)
 app.put("/api/user/edit", updateUsers)
 app.put("/api/user/edit-password", updatePassword)
 
-
-const port = process.env.PORT || 3000
-app.listen(port, () => {
-  console.log(`Example app listening on port hjh ${port}`)
-})

@@ -6,7 +6,7 @@ exports.createToken = (req, res) => {
             mail: req.body.mail,
             name: req.body.name
         }, 
-        process.env.TOKEN_KEY,
+        process.env.TOKEN_SECRET || "[z43s=_9u3^Er;m",
         {
             expiresIn: "2h"
         }

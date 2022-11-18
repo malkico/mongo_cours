@@ -5,8 +5,10 @@ const mongoose = require("mongoose")
 
 describe("GET /user", () => {
 
+    const HOST = process.env.HOST || "localhost"
+    const PORT = process.env.PORT || 3000
     const email = "Azerty@gmail.comjlbbss"
-    const baseURL = `${process.env.HOST}:${process.env.PORT}`
+    const baseURL = `${HOST}:${PORT}`
     const newUser = {
         email: email,
         lastname: "malki",
