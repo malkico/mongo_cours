@@ -1,13 +1,9 @@
-const express = require('express')
-const postModel = require("./model/User")
 const mongoose = require("mongoose")
 
 const {createServer} = require("./utils")
 const app = createServer()
 
-const {registerRoute} = require("./routes/register")
-const {findUser, findAll, deleteUser, updateUsers, updatePassword} = require("./routes/user")
-const { createToken } = require("./routes/token")
+const {findF, createF, removeF, editF, addC} = require("./routes/foodtruck")
 
 require('dotenv').config()
 
@@ -25,11 +21,9 @@ db.once("open", function () {
 
 
 // routes
-app.post('/api/auth/register',  registerRoute)
-app.post("/api/create/token", createToken)
-app.get("/api/user/profile/:email", findUser)
-app.get("/api/users", findAll)
-app.delete("/api/user/delete/:field/:value", deleteUser)
-app.put("/api/user/edit", updateUsers)
-app.put("/api/user/edit-password", updatePassword)
-
+app.post('/api/createF',  createF)
+app.get("/api/findF/:nom", findF)
+app.delete("/api/removeF/:nom", removeF)
+app.put("/api/editF/:id", editF)
+app.put("/api/addC/:id", addC)
+ 

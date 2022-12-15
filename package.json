@@ -1,21 +1,16 @@
 {
-  "name": "project_cours",
+  "name": "devoir_node",
   "version": "0.1.0",
-  "description": "un projet de cours mongodb",
+  "description": "un projet de cours Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "start": "pm2 kill && pm2 start index.js --watch && pm2 logs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "argon2": "^0.30.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "jest": "^29.3.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.7.2",
-    "supertest": "^6.3.1"
+    "mongoose": "^6.7.2"
   }
 }
